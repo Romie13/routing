@@ -1,0 +1,6 @@
+
+    <div style='border:1px solid black' *ngFor="let item of cards | paginate: { itemsPerPage: 2, currentPage: p }"> {{item}} </div>
+  
+
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

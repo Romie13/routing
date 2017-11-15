@@ -1,0 +1,11 @@
+<div class = 'container-fluid mainDiv' id='mainDiv' (scroll)='scrollFunction()'>
+  <ul>
+    <li *ngFor = 'let i of list'> {{i}} </li>
+  </ul>
+</div>
+{{divHeight}}
+{{relativeScroll}}
+{{scrollDown}}
+<div *ngIf='loading' class = 'load'>
+  Loading
+</div>

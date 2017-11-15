@@ -1,0 +1,6 @@
+.banner
+{
+    box-sizing: border-box;
+    height:100%;
+    border : 2px solid #08da82;
+}
