@@ -17,14 +17,16 @@ import { PaginationComponent } from './pagination/pagination.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { InfiniteScrollComponent } from './infinite-scroll/infinite-scroll.component';
 import {HttpClientModule} from '@angular/common/http';
+import { LoadingComponent } from './loading/loading.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'pagination', component : PaginationComponent},
   { path: 'scroll', component : InfiniteScrollComponent},
+  { path: 'load', component : LoadingComponent},
   { path: 'categories/:id', component: ServicesByCategoriesComponent,
     children: [
-      {path: '' , outlet: 'services-by-category', component: ServicesComponent},
+      {path: '' , outlet: 'services-by-category', component: LoadingComponent},
       {path: ':serviceid', outlet: 'services-by-category', component: ServiceDetailsComponent}
     ]
   },
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     BannerComponent,
     ServicesComponent,
     PaginationComponent,
-    InfiniteScrollComponent
+    InfiniteScrollComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
